@@ -1,13 +1,28 @@
 function coffeeShop(name,locations,roasters,machine,year,rating){
   this.name = name;
+  this.getName = function(){
+    return name;
+  }
   this.locations = locations;
+  this.getLocations = function(){
+    return locations.forEach(function(x){console.log(x);});
+  }
   this.roasters = roasters;
+  this.getRoasters = function(){
+    return roasters.forEach(function(x){console.log(x);});
+  }
   this.machine = machine;
+  this.getMachine = function(){
+    return machine;
+  }
   this.year = year;
   this.getAge = function(){
     return Date.now().getFullYear() - this.year;
   }
   this.rating = rating;
+  this.getRating = function(){
+    return rating.toString();
+  }
 
 }
 
